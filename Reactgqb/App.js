@@ -9,13 +9,15 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Text1 from "./Common/Text1"
+import Image2 from "./Common/Image2"
 
 type
 Props = {};
 export default class App extends Component < Props > {
     render() {
         return (
-            < Text1 / >
+            <Image2/>
+            // <Text1/>
     )
         ;
     }
