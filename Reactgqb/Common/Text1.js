@@ -51,6 +51,8 @@ const stylesxlp = StyleSheet.create({
         backgroundColor:'red',
         flexWrap:"wrap",
         padding:20,
+        fontSize: 40,
+        fontWeight: 'bold',
 
 // 方式2 行高居中
         // lineHeight:50,
