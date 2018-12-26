@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
         height:50,
         borderWidth:1,   //外边距的宽度
         borderColor:"#dddddd",  //外边距的颜色
-        
         margin:10,
         borderRadius:10,  //设置圆角的效果
         shadowColor:'#0000ff',//设置一个阴影的颜色
@@ -54,7 +53,6 @@ const styles = StyleSheet.create({
             height:1,
             width:1
         }//阴影的偏移量
-
     }
 })
 

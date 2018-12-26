@@ -28,11 +28,11 @@ export default class TouchanbleOpacity4 extends Component<Props> {
         )
     }
 
-click(event){
-    this.setState({
-        title:event
-    })
-}
+    click(event){
+        this.setState({
+            title:event
+        })
+    }
 
 }
 

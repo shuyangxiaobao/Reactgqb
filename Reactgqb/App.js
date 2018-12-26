@@ -36,3 +36,5 @@ export default class App extends Component < Props > {
     }
 }
 
+
+// cnpm install --save react react-dom
