@@ -9,30 +9,20 @@ import {
     Button,
 } from 'react-native';
 
-
-// Props = {};
-// export default class LifeCycle5 extends Component < Props > {
-//     render() {
-//         return (
-//             // <Text1/>
-//             // <Image2/>
-//             // <TextInput3/>
-//             // <TouchableOpacity4/>
-//            <View>
-//                <Text>33434</Text>
-//            </View>
-
-//     )
-//         ;
-//     }
-// }
-
 class LifeCycle5 extends React.Component{
-    state={
-        title:"HHHH"
+
+    // this.state={
+    //     title:"HHHH"
+    // }
+    constructor(props){
+        super(props);
+        this.state={
+            title:"HHHH"
+        }
     }
     render() {
-        AlertIOS.alert("render")
+        // AlertIOS.alert("render")
+        console.log("render 2");
         return (            
            <View style={styles.container}> 
             <TouchableOpacity
@@ -45,75 +35,47 @@ class LifeCycle5 extends React.Component{
    } // 注意这里既没有分号也没有逗号 }
 
     getDefaultProps(){
-        AlertIOS.alert("getDefaultProps 来了1")
+        console.log("getDefaultProps");
+
+        // AlertIOS.alert("getDefaultProps 来了1")
     }
 
     // 在组件创建，并初始化了状态之后，在第一次绘制 render() 之前。
     // 在整个生命周期中只被调用一次
     componentWillMount(){
-        AlertIOS.alert("componentWillMount 来了1")
+        console.log("componentWillMount 来了1");
+        // AlertIOS.alert("componentWillMount 来了1")
     }
 // 在组件第一次绘制之后调用 通知组件已经加载完成
     componentDidMount(){
-        AlertIOS.alert("componentDidMount 来了2")
+        console.log("componentDidMount 来了3");
+        // AlertIOS.alert("componentDidMount 来了2")
     }
 
-    componentWillReceiveProps(){
-        AlertIOS.alert("componentWillReceiveProps 来了3")
+    componentWillReceiveProps(nextProps){
+        console.log("componentWillReceiveProps 来了4")
+        // AlertIOS.alert("componentWillReceiveProps 来了3")
     }
 
     //这个方法!!刷新UI之后调用!!!第一次加载UI不会来!!
     componentDidUpdate(){
-        AlertIOS.alert('DidUpdate');
+        console.log('DidUpdate');
+        // AlertIOS.alert('DidUpdate');
     }
 
-    // 当组件接收到新的属性和状态改变的话
-    // shouldComponentUpdate(){
-    //     AlertIOS.alert("shouldComponentUpdate");
-    // }
+    // 当组件接收到新的属性和状态改变的话 组件是否需要更新
+    shouldComponentUpdate(){
+        return true;
+        // AlertIOS.alert("shouldComponentUpdate");
+    }
 
     click(event){
         this.setState({
             title:event,
             haha:event
         })
-
     }
-
-
-    
-
 }
-
-
-// var LifeCycle5 = React.createClass({
-//     // static defaultProps = {        
-//     //      autoPlay: false,        
-//     //      maxLoops: 10,
-
-//     // };  // 注意这里有分号
-
-//     // static propTypes = {        
-//     //     //  autoPlay: React.PropTypes.bool.isRequired,        
-//     //     //  maxLoops: React.PropTypes.number.isRequired,
-//     //     //  posterFrameSrc: React.PropTypes.string.isRequired,        
-//     //     //  videoSrc: React.PropTypes.string.isRequired,    
-//     // };  // 注意这里有分号
-
-//     // getDefaultProps(){
-//     //     AlertIOS.alert("getDefaultProps 来了1")
-//     // },
-
-//     render() {             
-//          return (            
-//             <View style={styles.container}> 
-//                 <Text>09090</Text>
-//                 <Text>6789</Text>
-//             </View>
-//          );    
-//     } // 注意这里既没有分号也没有逗号 }
-
-// })
 
 const styles=StyleSheet.create({
     container:{

@@ -7,7 +7,14 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {
+    Platform, 
+    StyleSheet, 
+    Text, 
+    View,
+    Switch,
+    AlertIOS,
+} from 'react-native';
 
 
 
@@ -15,16 +22,43 @@ type Props = {};
 var Dimensions = require('Dimensions');
 var width = Dimensions.get('window').width;
 export default class Text1 extends Component<Props> {
+
+
+    constructor(props) 
+    {
+        super(props);
+        this.state = 
+        {
+              switchstate:true
+        };
+    }
+
     render() {
         return (
            <View style={stylesxlp.container}>
                 <View style={stylesxlp.viewStyle}>
                 <Text style={stylesxlp.textStyle}>12345123451234512345123451234512345123451234512345123451234512345123451234512345123451234512345 </Text>
-                {/* <Text>一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五</Text> */}
+          <Switch  disabled={true}/>
+          <Switch tintColor={'yellow'} onTintColor={'blue'} value={this.state.switchstate}onValueChange={(value)=>this.click(value)}/>
                 </View>
              </View>
     );
     }
+
+    click(value){
+        console.log(value.toString());
+        if (value){
+            AlertIOS.alert(value.toString());
+        }
+        this.setState({
+            switchstate:value
+        })
+    }
+
+
+
+
+
 }
 
 
@@ -51,7 +85,7 @@ const stylesxlp = StyleSheet.create({
         backgroundColor:'red',
         flexWrap:"wrap",
         padding:20,
-        fontSize: 40,
+        fontSize: 20,
         fontWeight: 'bold',
 
 // 方式2 行高居中
