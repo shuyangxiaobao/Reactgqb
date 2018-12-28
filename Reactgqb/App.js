@@ -21,9 +21,12 @@ import LifeCycle5 from "./Common/LifeCycle5"
 import ScrollView6 from "./Common/ScrollView6"
 import Demo7 from "./Common/7.定时器(无限轮播)"
 import Demo8 from "./Common/8.Switch"
-// import Demo9 from "./Common/9. ActivityIndicator"
+import Demo9 from "./Common/9. ActivityIndicator"
+import Demo10 from "./Common/10.Button"
+import Demo11 from "./Common/11 DatePickerIOS"
+import Demo12 from "./Common/12.KeyboardAvoidingView"
 
-type
+// type
 Props = {};
 export default class App extends Component < Props > {
     render() {
@@ -35,8 +38,11 @@ export default class App extends Component < Props > {
             // <LifeCycle5/>
             // <ScrollView6/>
             // <Demo7/>
-            <Demo8/>
+            // <Demo8/>
             // <Demo9/>
+            // <Demo10/>
+            // <Demo11/>
+            <Demo12/>
 
 
     )
