@@ -26,6 +26,7 @@ import Demo10 from "./Common/10.Button"
 import Demo11 from "./Common/11 DatePickerIOS"
 import Demo12 from "./Common/12.KeyboardAvoidingView"
 import Demo13 from "./Common/13.ListView(单组)"
+import Demo14 from "./Common/14.ListView(多组)"
 
 // type
 Props = {};
@@ -44,7 +45,8 @@ export default class App extends Component < Props > {
             // <Demo10/>
             // <Demo11/>
             // <Demo12/>
-            <Demo13/>
+            // <Demo13/>
+            <Demo14/>
 
 
     )
