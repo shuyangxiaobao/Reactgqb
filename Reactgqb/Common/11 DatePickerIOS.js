@@ -81,18 +81,8 @@ export default class DatePickerIOS11 extends Component<Props> {
         );
     }
     myDateChange(date){
-        // AlertIOS.alert("002")
         AlertIOS.alert(date)
     }
-
-    // onPressLearnMore(){
-    //     // AlertIOS.alert("12345");
-    //     this.setState({
-    //       animating:!this.state.animating,
-    //       switchstate:!this.state.switchstate,
-    //       buttonTitle:this.state.buttonTitle + 1
-    //     })
-    // }
 }
 
 

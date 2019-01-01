@@ -27,6 +27,9 @@ import Demo11 from "./Common/11 DatePickerIOS"
 import Demo12 from "./Common/12.KeyboardAvoidingView"
 import Demo13 from "./Common/13.ListView(单组)"
 import Demo14 from "./Common/14.ListView(多组)"
+import Demo15 from "./Common/15.Tabbar"
+import Demo16 from  "./Common/16.Navigator"
+
 
 // type
 Props = {};
@@ -46,7 +49,9 @@ export default class App extends Component < Props > {
             // <Demo11/>
             // <Demo12/>
             // <Demo13/>
-            <Demo14/>
+            // <Demo14/>
+            // <Demo15/>
+            <Demo16/>
 
 
     )
@@ -58,3 +63,5 @@ export default class App extends Component < Props > {
 // cnpm install --save react react-dom
 
 // npm i react-timer-mixin --save      安装定时器
+
+// npm install react-native-deprecated-custom-components --save

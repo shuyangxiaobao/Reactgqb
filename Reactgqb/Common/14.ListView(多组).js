@@ -20,6 +20,7 @@ import {
     ListView,
     Image,
     TouchableOpacity,
+    AlertIOS,
 } from 'react-native';
 
 var Car = require('./Json/Car.json');
@@ -55,7 +56,7 @@ export default class ListViewTest2 extends Component {
                 {/*ListView*/}
                 <ListView
                     dataSource={this.state.dataSource}
-                    renderRow={this.renderRow}
+                    renderRow={this.renderRow.bind(this)}
                     renderSectionHeader={this.renderSectionHeader}
                 />
             </View>
@@ -72,15 +73,21 @@ export default class ListViewTest2 extends Component {
     }
 
     //返回每一行Cell
-    renderRow(rowData){
+    renderRow(rowData,sectionID, rowID){
+        // var obj = this;
         return(
-            <TouchableOpacity activeOpacity={0.5}>
+            <TouchableOpacity activeOpacity={0.5}
+            onPress={()=>this.click(sectionID,rowID)}
+            >
                 <View style={styles.rowStyle}>
                     <Image source={{uri:rowData.icon}} style={styles.rowImageStyle}/>
                     <Text style={{marginLeft:5}}>{rowData.name}</Text>
                 </View>
             </TouchableOpacity>
         )
+    }
+    click(sectionID,rowID){
+        AlertIOS.alert(sectionID.toString() +":"+ rowID.toString());
     }
 
     //发送网络请求的生命周期方法
@@ -93,12 +100,12 @@ export default class ListViewTest2 extends Component {
         //拿到Json
         var jsonData = Car.data;
         //定义数据源需要的变量
-        var dataBlob = {},
-            sectionIDs = [],
+        var dataBlob = {},  
+            sectionIDs = [],//组ID
             rowIDs = [],//二维数组!!
             cars = [];
 
-        //遍历
+        // //遍历
         for(var i=0;i<jsonData.length;i++){
             //1.组ID拿到
             sectionIDs.push(i);
@@ -114,7 +121,9 @@ export default class ListViewTest2 extends Component {
                 dataBlob[i+':'+j] = cars[j];
             }
         }
-        //更新状态机!!
+        console.log(dataBlob);
+        console.log(rowIDs);
+        //更新状态机!!21    1
         this.setState({
             dataSource:this.state.dataSource.cloneWithRowsAndSections(dataBlob,sectionIDs,rowIDs)
         })
