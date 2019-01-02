@@ -37,6 +37,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* ReactgqbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactgqbTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BB65E21DCB2AE0041388B /* ViewOne.m */; };
+		906BB66221DCB4680041388B /* HKViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BB66021DCB4680041388B /* HKViewOne.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
 
@@ -342,6 +344,10 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		906BB65D21DCB2AE0041388B /* ViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewOne.h; path = Reactgqb/ViewOne.h; sourceTree = "<group>"; };
+		906BB65E21DCB2AE0041388B /* ViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewOne.m; path = Reactgqb/ViewOne.m; sourceTree = "<group>"; };
+		906BB66021DCB4680041388B /* HKViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKViewOne.m; path = Reactgqb/HKViewOne.m; sourceTree = "<group>"; };
+		906BB66121DCB4680041388B /* HKViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKViewOne.h; path = Reactgqb/HKViewOne.h; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -481,6 +487,10 @@
 		13B07FAE1A68108700A75B9A /* Reactgqb */ = {
 			isa = PBXGroup;
 			children = (
+				906BB66121DCB4680041388B /* HKViewOne.h */,
+				906BB66021DCB4680041388B /* HKViewOne.m */,
+				906BB65D21DCB2AE0041388B /* ViewOne.h */,
+				906BB65E21DCB2AE0041388B /* ViewOne.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1118,6 +1128,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				906BB66221DCB4680041388B /* HKViewOne.m in Sources */,
+				906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

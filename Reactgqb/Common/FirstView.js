@@ -17,7 +17,7 @@ import {
 
 
 
-// import IOSView from './IOSView'
+import IOSView from './IOSView'
 import SecondView from "./SecondView"
 
 export default class FirstView extends Component {
@@ -66,21 +66,20 @@ export default class FirstView extends Component {
     }
 
     yuanshengClick(){
-        // this.props.nav.push({
-        //     component:IOSView,
-        //     name:"顺传数值",
-        //     params:{
-        //         title:'001',
-        //         //从第二个页面获取userName
-        //         getUserName:function (user) {
-        //             this.setState({
-        //                 userName:user
-        //             })
-        //         }.bind(this),
-        //         // name:"第二个name",
-
-        //     }
-        // })
+        this.props.nav.push({
+            component:IOSView,
+            name:"顺传数值",
+            params:{
+                title:'001',
+                //从第二个页面获取userName
+                getUserName:function (user) {
+                    this.setState({
+                        userName:user
+                    })
+                }.bind(this),
+                // name:"第二个name",
+            }
+        })
     }
 
 
