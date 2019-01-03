@@ -29,7 +29,8 @@ import Demo13 from "./Common/13.ListView(单组)"
 import Demo14 from "./Common/14.ListView(多组)"
 import Demo15 from "./Common/15.Tabbar"
 import Demo16 from  "./Common/16.Navigator"
-import Demo17 from  "./Common/17.CustomTabBar"
+import Demo17 from  "./Common/17.自定义tabbar/HKMain"
+import Demo18 from  "./Common/18.FlatList"
 
 // type
 Props = {};
@@ -52,7 +53,9 @@ export default class App extends Component < Props > {
             // <Demo14/>
             // <Demo15/>
             // <Demo16/>
-            <Demo17/>
+            // <Demo17/>
+            <Demo18/>
+
 
     )
         ;
@@ -65,3 +68,5 @@ export default class App extends Component < Props > {
 // npm i react-timer-mixin --save      安装定时器
 
 // npm install react-native-deprecated-custom-components --save
+
+// sudo npm install react-native-scrollable-tab-view --save    第三方tabbar
