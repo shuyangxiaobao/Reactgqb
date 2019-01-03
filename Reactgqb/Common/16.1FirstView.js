@@ -17,8 +17,8 @@ import {
 
 
 
-import IOSView from './IOSView'
-import SecondView from "./SecondView"
+import IOSView from './16.2IOSView'
+import SecondView from "./16.3SecondView"
 
 export default class FirstView extends Component {
     // 构造函数
@@ -36,7 +36,7 @@ export default class FirstView extends Component {
                {/*导航条*/}
                <View style={styles.navStyle}>
                    {/*导航条中间的文字*/}
-                   <Text>{this.props.title+'名字是'+ this.state.userName +this.props.name}</Text>
+                   <Text>{this.props.name+'名字是'+ this.state.userName +this.props.name}</Text>
 
                </View>
                <TouchableOpacity
@@ -71,13 +71,13 @@ export default class FirstView extends Component {
             name:"顺传数值",
             params:{
                 title:'001',
-                //从第二个页面获取userName
+                //从第二个页面获取userName  逆向传值
                 getUserName:function (user) {
                     this.setState({
                         userName:user
                     })
                 }.bind(this),
-                // name:"第二个name",
+                name:"第二个name",
             }
         })
     }
@@ -100,8 +100,9 @@ export default class FirstView extends Component {
                         userName:user
                     })
                 }.bind(this),
-                // name:"第二个name",
-
+                getxlpname:function(name){
+                    AlertIOS.alert(name);
+                }.bind(this),
             }
         })
     }

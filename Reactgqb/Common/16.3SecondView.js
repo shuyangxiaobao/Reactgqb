@@ -23,9 +23,7 @@ export default class SecondView extends Component {
                     onPress={this.viewClick.bind(this)}
                 >
                     <Text>{this.props.title}</Text>
-        <Text>{this.props.name}</Text>
-
-
+                    <Text>{this.props.name}</Text>
         </TouchableOpacity>
             </View>
         );
@@ -34,6 +32,9 @@ export default class SecondView extends Component {
         //为了严谨起见!!先判断
         if(this.props.getUserName){
             this.props.getUserName('全世界最帅的男人!!')
+        }
+        if(this.props.getxlpname){
+            this.props.getxlpname("小妞");
         }
 
         //props 属性!!! 这个属性是你这个对象创建的时候定义的!!!

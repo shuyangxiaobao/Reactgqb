@@ -29,7 +29,7 @@ import Demo13 from "./Common/13.ListView(单组)"
 import Demo14 from "./Common/14.ListView(多组)"
 import Demo15 from "./Common/15.Tabbar"
 import Demo16 from  "./Common/16.Navigator"
-
+import Demo17 from  "./Common/17.CustomTabBar"
 
 // type
 Props = {};
@@ -51,8 +51,8 @@ export default class App extends Component < Props > {
             // <Demo13/>
             // <Demo14/>
             // <Demo15/>
-            <Demo16/>
-
+            // <Demo16/>
+            <Demo17/>
 
     )
         ;
