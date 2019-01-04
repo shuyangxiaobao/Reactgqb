@@ -45,7 +45,7 @@ RCT_EXPORT_METHOD(changeTitle:(NSString *)title){
 }
 
 -(void)btnClick{
-  UIAlertController * alert = [UIAlertController alertControllerWithTitle:self.title message:@"哥么来了" preferredStyle:(UIAlertControllerStyleAlert)];
+  UIAlertController * alert = [UIAlertController alertControllerWithTitle:self.title message:@"哥么来了2" preferredStyle:(UIAlertControllerStyleAlert)];
   [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil]];
   [alert addAction:[UIAlertAction actionWithTitle:@"确认" style:(UIAlertActionStyleDefault) handler:nil]];
   

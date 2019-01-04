@@ -31,6 +31,8 @@ import Demo15 from "./Common/15.Tabbar"
 import Demo16 from  "./Common/16.Navigator"
 import Demo17 from  "./Common/17.自定义tabbar/HKMain"
 import Demo18 from  "./Common/18.FlatList"
+import Demo19 from "./Common/19.ImageBackground"
+import Demo20 from "./Common/20.MaskedViewIOS"
 
 // type
 Props = {};
@@ -54,7 +56,9 @@ export default class App extends Component < Props > {
             // <Demo15/>
             // <Demo16/>
             // <Demo17/>
-            <Demo18/>
+            // <Demo18/>
+            // <Demo19/>
+            <Demo20/>
 
 
     )

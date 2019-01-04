@@ -30,7 +30,7 @@ var manager = NativeModules.ViewOne;
 
 // RN 调用原生
 manager.changeTitle('我来了!!!');
-manager.ocmethod("111");
+// manager.ocmethod("1234");
 
 // 原生调用RN
 NativeAppEventEmitter.addListener('RNnotfication',(userInfo)=>{

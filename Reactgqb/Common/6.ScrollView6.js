@@ -36,7 +36,7 @@ export default class ScrollView6 extends Component{
                 <View key={i}
                       style={{backgroundColor:colors[i],width:375,height:667,
                         justifyContent:'center',alignItems:"center" }}
-                         style={styles.cellStyles}
+                        //  style={styles.cellStyles}
                 >
                     <Text>{i}</Text>
                 </View>
