@@ -1,3 +1,5 @@
+
+// 渲染一个带蒙版的视图
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -12,14 +14,15 @@ export default class MaskedViewIOSgqb extends Component{
     render(){
         return (
           <View style={styles.container}>
-            <MaskedViewIOS
-            style={{ flex: 1, flexDirection: 'row', height: '100%' }}
+          <View style={{width:375,height:100}}>
+          <MaskedViewIOS
+            style={{ flex: 1, flexDirection: 'row', height: 100 }}
             maskElement={
               <View style={{
                 // 蒙版的效果与其本身透明度相反。先设置整个背景透明，表示完全盖住蒙版底下的元素，不显示出来。
                 backgroundColor: 'transparent',  //transparent
                 flex: 1,  
-                height:100,
+                // height:100,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
@@ -39,6 +42,8 @@ export default class MaskedViewIOSgqb extends Component{
             <View style={{ flex: 1.5, height: '100%', backgroundColor: 'yellow' }} />
             <View style={{ flex: 1, height: '100%', backgroundColor: 'blue' }} />
           </MaskedViewIOS>
+          </View>
+           
           <Text style={styles.viewBottomStyle}>3453 </Text>
 
           </View>
@@ -60,8 +65,8 @@ export default class MaskedViewIOSgqb extends Component{
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        marginTop:0,
-        backgroundColor:"gray",
+        marginTop:20,
+        backgroundColor:"white",
     },
 
     viewBottomStyle:{

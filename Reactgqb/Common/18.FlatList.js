@@ -10,7 +10,7 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-import MessageCell from './MessageCell';
+import MessageCell from './18(1)MessageCell';
 
 const { width, height } = Dimensions.get('window');
 const SCREEN_WIDTH = width;

@@ -33,6 +33,24 @@ import Demo17 from  "./Common/17.自定义tabbar/HKMain"
 import Demo18 from  "./Common/18.FlatList"
 import Demo19 from "./Common/19.ImageBackground"
 import Demo20 from "./Common/20.MaskedViewIOS"
+import Demo21 from "./Common/21.ModalView"
+import Demo22 from "./Common/22.Picker"
+import Demo23 from "./Common/23.PickerIOS"
+import Demo24 from "./Common/24.ProgressViewIOS"
+import Demo25 from "./Common/25.RefreshControl"
+import Demo26 from "./Common/26.SafeAreaView"
+import Demo27 from "./Common/27.SectionList"
+import Demo28 from "./Common/28.SegmentedControlIOS"
+import Demo29 from "./Common/29.Slider"
+// import Demo30 from "./Common"
+// import Demo31 from "./Common"
+// import Demo32 from "./Common"
+// import Demo33 from "./Common"
+// import Demo34 from "./Common"
+// import Demo35 from "./Common"
+// import Demo36 from "./Common"
+// import Demo37 from "./Common"
+
 
 // type
 Props = {};
@@ -58,7 +76,28 @@ export default class App extends Component < Props > {
             // <Demo17/>
             // <Demo18/>
             // <Demo19/>
-            <Demo20/>
+            // <Demo20/>
+            // <Demo21/>
+            // <Demo22/>
+            // <Demo23/>
+            // <Demo24/>
+            // <Demo25/>
+            // <Demo26/>
+            // <Demo27/>
+            // <Demo28/>
+
+            <Demo29/>
+            // <Demo30/>
+            // <Demo31/>
+            // <Demo32/>
+            // <Demo33/>
+            // <Demo34/>
+            // <Demo35/>
+            // <Demo36/>
+
+
+
+
 
 
     )
