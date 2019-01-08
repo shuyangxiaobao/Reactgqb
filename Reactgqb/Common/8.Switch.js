@@ -36,8 +36,21 @@ export default class SWitch8 extends Component<Props> {
     render() {
         return (
            <View style={stylesxlp.container}>
-          <Switch  disabled={true}/>
-          <Switch tintColor={'yellow'} onTintColor={'blue'} value={this.state.switchstate}onValueChange={(value)=>this.click(value)}/>
+          <Switch 
+        //  如果为true则禁用此组件的交互
+          disabled={false}
+        //   关闭状态时的边框颜色(iOS)或背景颜色(Android)。
+            tintColor={'yellow'} 
+        //   开启状态时的背景颜色
+            onTintColor={'blue'} 
+        // 背景色
+            ios_backgroundColor={"purple"}
+        // 表示此开关是否打开。默认为false（关闭状态）
+            value={this.state.switchstate}
+        //   开关上圆形按钮的背景颜色
+            thumbColor={"red"}
+        //   当值改变的时候调用此回调函数，参数为新的值
+          onValueChange={(value)=>this.click(value)}/>
          </View>
     );
     }

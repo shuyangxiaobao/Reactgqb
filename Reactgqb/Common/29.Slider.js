@@ -61,15 +61,16 @@ export default class Slidetest extends Component<Props> {
         testID={"001"}
     // 滑块的颜色(Android)
         thumbTintColor={"yellow"}
-    // 指定一个滑块右侧轨道背景图
+    // iOS 指定一个滑块右侧轨道背景图
         maximumTrackImage={require('./Source/img/icon3.png')}
-    // 指定一个滑块左侧轨道背景图
+    // iOS 指定一个滑块左侧轨道背景图
         minimumTrackImage={require('./Source/img/icon7.png')}
+    // iOS 给滑块设置一张图片。只支持静态图片
+        thumbImage={require('./Source/img/icon8.png')}
 
-
+    // iOS 给轨道设置一张背景图。只支持静态图片。图片最中央的像素会被平铺直至填满轨道
+        trackImage={require('./Source/img/icon9.jpg')}
         >
-
-
         </Slider>
         <Text>{this.state.value}</Text>
 

@@ -32,15 +32,27 @@ export default class HKTabBar extends Component {
             </View>
             {/*选项卡*/}
             <TabBarIOS
-                barTintColor='red'  //tabbar 背景颜色
-                tintColor='purple'   //选中时item的颜色
+            // default black
+                barStyle={"black"}
+                barTintColor='white'  //tabbar 背景颜色
+                tintColor='red'   //选中时item的颜色
+                itemPositioning={"fill"}  //auto center fill  
+                translucent={false}  //
+                style={styles.tabBarIOSStyle}
+
+                unselectedItemTintColor={"yellow"} //未选中时item的颜色
             >
                 {/*第一个*/}
                 <TabBarIOS.Item
-                    systemIcon="contacts"
+                    // systemIcon="contacts"
                     title="首页1"
                     badge="3"
-                    selected={this.state.selectedTabBarItem == 'home'}
+                    selected={this.state.selectedTabBarItem == 'home'}  //是否选中
+                    icon={require('./Source/img/icon3.png')}
+
+                    badgeColor={"orange"}   //小红点颜色
+
+                    selectedIcon={require('./Source/img/icon.png')}  //选中时的图标
                     onPress = {()=>{this.setState({selectedTabBarItem:'home'})}}
                 >
                 <View style={[styles.commonViewStyle,{backgroundColor:'red'}]}>
@@ -95,5 +107,8 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center'
+    },
+    tabBarIOSStyle:{
+        height:300,
     }
 });

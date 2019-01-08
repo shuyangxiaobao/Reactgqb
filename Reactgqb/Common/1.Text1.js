@@ -36,13 +36,55 @@ export default class Text1 extends Component<Props> {
     render() {
         return (
            <View style={stylesxlp.container}>
-                <View style={stylesxlp.viewStyle}>
-                <Text style={stylesxlp.textStyle}>12345123451234512345123451234512345123451234512345123451234512345123451234512345123451234512345 </Text>
-          <Switch  disabled={true}/>
-          <Switch tintColor={'yellow'} onTintColor={'blue'} value={this.state.switchstate}onValueChange={(value)=>this.click(value)}/>
-                </View>
+                <Text style={stylesxlp.textStyle}
+
+            // 决定用户是否可以长按选择文本，以便复制和粘贴
+                selectable={true}
+                accessibilityHint={"235"}
+
+                accessibilityLabel={"hahha"}
+
+                accessible={false}
+
+            //head - 从文本内容头部截取显示省略号。例如： "...efg"
+            // middle - 在文本内容中间截取显示省略号。例如： "ab...yz"
+            // tail - 从文本内容尾部截取显示省略号。例如： "abcd..."
+            // clip - 不显示省略号，直接从尾部截断。
+                ellipsizeMode={"clip"}
+                numberOfLines={2}
+
+                nativeID={"test"}
+                onLayout={()=>{this.onMyLayout}}
+            // 当文本被长按以后调用此回调函数
+                onLongPress={()=>{this.click("长按")}}
+            // 当文本被点击以后调用此回调函数。
+                onPress={()=>{this.click("点击")}}
+
+                pressRetentionOffset={{top:30,left:100,bottom:400,right:300}}
+            // 控制字体是否要根据系统的“字体大小”辅助选项来进行缩放。默认值为true。
+                allowFontScaling={false}
+
+                testID={"id"}
+
+                disabled={false}
+
+            // Android
+                selectionColor={"purple"}
+
+            // iOS 指定字体是否随着给定样式的限制而自动缩放。
+                adjustsFontSizeToFit={true}
+                minimumFontScale={0.02}
+            // 设为true时，当文本被按下会没有任何视觉效果。默认情况下，文本被按下时会有一个灰色的、椭圆形的高光。
+                suppressHighlighting={false}
+                >1234567abcdefgfYYjkjUIII888jjjJJJ 
+
+                </Text>
              </View>
     );
+    }
+
+    onMyLayout(){
+        AlertIOS.alert("123");
     }
 
     click(value){
@@ -66,7 +108,7 @@ const stylesxlp = StyleSheet.create({
     container:{
         backgroundColor:"#dddddd",
         flex:1,
-        alignItems:'center',
+        // alignItems:'center',
         justifyContent:"center",
         flexDirection:"column",
     },
@@ -82,19 +124,45 @@ const stylesxlp = StyleSheet.create({
         // alignItems:"center",
     },
     textStyle:{
-        backgroundColor:'red',
+        backgroundColor:'white',
         flexWrap:"wrap",
         padding:20,
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 20,   //字体大小
+    //字体粗细 ('normal', 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900')
+        fontWeight:"bold", 
+        color:"orange",  //字体颜色
+        fontStyle:"italic",  //  字体样式 normal, italic(斜体)
+        //ying yin
+        textShadowOffset:{width: 2,height: 3},
+        textAlign:"center",    //('auto', 'left', 'right', 'center', 'justify')
+    // ('none', 'underline', 'line-through', 'underline line-through')
+        textDecorationLine:"underline line-through",
+
+        textDecorationColor:"blue",     //下划线颜色
+
+        letterSpacing:5,// 每个字的间隔
+
+    // ('none', 'uppercase'(大写), 'lowercase'（小写）, 'capitalize'（第一个字母大写，后面小写）)
+        textTransform:"capitalize",
+    // enum('auto', 'ltr', 'rtl') (iOS)
+        writingDirection:"ltr",
+
+        textShadowColor:"red",
+        // fontFamily:"fhj",
+    // 阴影模糊程度
+        textShadowRadius:3,
 
 // 方式2 行高居中
-        // lineHeight:50,
+        // lineHeight:50,  //行高
         // height:50,
 
 // 方式3.设置上下边距使其居中
         paddingTop:20,
         paddingBottom:20,
+
+
+
+
     }
 
 })

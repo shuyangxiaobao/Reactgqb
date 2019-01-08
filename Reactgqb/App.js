@@ -27,7 +27,7 @@ import Demo11 from "./Common/11 DatePickerIOS"
 import Demo12 from "./Common/12.KeyboardAvoidingView"
 import Demo13 from "./Common/13.ListView(单组)"
 import Demo14 from "./Common/14.ListView(多组)"
-import Demo15 from "./Common/15.Tabbar"
+import Demo15 from "./Common/15.TabBarIOS"
 import Demo16 from  "./Common/16.Navigator"
 import Demo17 from  "./Common/17.自定义tabbar/HKMain"
 import Demo18 from  "./Common/18.FlatList"
@@ -42,8 +42,8 @@ import Demo26 from "./Common/26.SafeAreaView"
 import Demo27 from "./Common/27.SectionList"
 import Demo28 from "./Common/28.SegmentedControlIOS"
 import Demo29 from "./Common/29.Slider"
-// import Demo30 from "./Common"
-// import Demo31 from "./Common"
+import Demo30 from "./Common/30.SnapshotViewIOS"
+import Demo31 from "./Common/31.StatusBar"
 // import Demo32 from "./Common"
 // import Demo33 from "./Common"
 // import Demo34 from "./Common"
@@ -57,7 +57,7 @@ Props = {};
 export default class App extends Component < Props > {
     render() {
         return (
-            // <Text1/>
+            <Text1/>
             // <Image2/>
             // <TextInput3/>
             // <TouchableOpacity4/>
@@ -86,7 +86,7 @@ export default class App extends Component < Props > {
             // <Demo27/>
             // <Demo28/>
 
-            <Demo29/>
+            // <Demo29/>
             // <Demo30/>
             // <Demo31/>
             // <Demo32/>

@@ -13,6 +13,7 @@ import {
     Text, 
     View,
     AlertIOS,
+    SnapshotViewIOS,
 } from 'react-native';
 
 
@@ -20,7 +21,7 @@ import {
 type Props = {};
 var Dimensions = require('Dimensions');
 var width = Dimensions.get('window').width;
-export default class Text1 extends Component<Props> {
+export default class SnapshotViewIOStest extends Component<Props> {
 
     constructor(props) 
     {
@@ -34,9 +35,19 @@ export default class Text1 extends Component<Props> {
     render() {
         return (
         <View style={styles.container}>
+            <SnapshotViewIOS
+                onSnapshotReady={(value)=>{this.click(value)}}
+                style={styles.SnapshotViewIOSStyle}>
+            
+            </SnapshotViewIOS>
 
         </View>
     );
+    }
+
+
+    click(value){
+        AlertIOS.alert(value.toString());
     }
 }
 
@@ -49,6 +60,14 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         flexDirection:"column",
     },
+
+    SnapshotViewIOSStyle:{
+        width:100,
+        height:100,
+        marginTop:100,
+        backgroundColor:"red",
+    }
+
 
 })
 
