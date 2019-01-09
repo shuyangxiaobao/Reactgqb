@@ -15,7 +15,7 @@ import {Platform,
 } from 'react-native';
 import Text1 from "./Common/1.Text1"
 import Image2 from "./Common/2.Image2"
-import TextInput3 from "./Common/3.TextInput3"
+import Demo3 from "./Common/3.TextInput3"
 import TouchableOpacity4 from "./Common/4.TouchableOpacity4"
 import LifeCycle5 from "./Common/5.LifeCycle5"
 import ScrollView6 from "./Common/6.ScrollView6"
@@ -57,12 +57,14 @@ Props = {};
 export default class App extends Component < Props > {
     render() {
         return (
-            <Text1/>
+            // <Text1/>
             // <Image2/>
-            // <TextInput3/>
+         
             // <TouchableOpacity4/>
             // <LifeCycle5/>
             // <ScrollView6/>
+
+            <Demo3/>
             // <Demo7/>
             // <Demo8/>
             // <Demo9/>
@@ -94,11 +96,6 @@ export default class App extends Component < Props > {
             // <Demo34/>
             // <Demo35/>
             // <Demo36/>
-
-
-
-
-
 
     )
         ;
