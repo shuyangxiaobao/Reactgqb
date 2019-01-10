@@ -44,12 +44,12 @@ import Demo28 from "./Common/28.SegmentedControlIOS"
 import Demo29 from "./Common/29.Slider"
 import Demo30 from "./Common/30.SnapshotViewIOS"
 import Demo31 from "./Common/31.StatusBar"
-// import Demo32 from "./Common"
-// import Demo33 from "./Common"
-// import Demo34 from "./Common"
-// import Demo35 from "./Common"
-// import Demo36 from "./Common"
-// import Demo37 from "./Common"
+import Demo32 from "./Common/32.TouchableHighlight"
+import Demo33 from "./Common/33.TouchableNativeFeedback"
+import Demo34 from "./Common/34.View"
+import Demo35 from "./Common/35.VirtualizedList"
+import Demo36 from "./Common/36.WebView"
+import Demo37 from "./Common/37.ActionSheetIOS"
 
 
 // type
@@ -64,7 +64,7 @@ export default class App extends Component < Props > {
             // <LifeCycle5/>
             // <ScrollView6/>
 
-            <Demo3/>
+            // <Demo3/>
             // <Demo7/>
             // <Demo8/>
             // <Demo9/>
@@ -87,7 +87,6 @@ export default class App extends Component < Props > {
             // <Demo26/>
             // <Demo27/>
             // <Demo28/>
-
             // <Demo29/>
             // <Demo30/>
             // <Demo31/>
@@ -96,6 +95,24 @@ export default class App extends Component < Props > {
             // <Demo34/>
             // <Demo35/>
             // <Demo36/>
+            <Demo37/>
+            // <Demo38/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+            // <Demo37/>
+
+
 
     )
         ;

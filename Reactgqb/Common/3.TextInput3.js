@@ -27,7 +27,7 @@ export default class TextInput3 extends Component<Props> {
             autoComplete={"off"}
 
     // 是否隐藏光标
-            caretHidden={true}
+            caretHidden={false}
 
 
             // value={'http://www.baidu.com'}
@@ -54,7 +54,7 @@ export default class TextInput3 extends Component<Props> {
             keyboardAppearance={"light"}
 
     // 决定弹出的何种软键盘
-            keyboardType={"numeric"}
+            keyboardType={"default"}
     // 限制文本框中最多的字符数
             maxLength={500}
     // 当文本框失去焦点的时候调用此回调函数。
@@ -97,8 +97,20 @@ export default class TextInput3 extends Component<Props> {
             // scrollEnabled={false}
 
     // 如果为true，文本框会遮住之前输入的文字，这样类似密码之类的敏感文字可以更加安全。默认//值为false。multiline={true}时不可用
-            secureTextEntry={true}
-            
+            secureTextEntry={false}
+    // 设置选中文字的范围（指定首尾的索引值）。如果首尾为同一索引位置，则相当于指定光标的位置。
+            // selection={{start: 10,end: 10}}
+    // 设置输入框高亮时的颜色（还包括光标）。
+            selectionColor={"orange"}
+    // 如果为true，当获得焦点的时候，所有的文字都会被选中。
+            selectTextOnFocus={true}
+    // 如果设置为false，则禁用拼写检查的样式（比如错误拼写的单词下的红线）。          
+            spellCheck = {false}
+
+    // 为键盘和系统提供有关用户输入内容的预期语义含义的信息。
+    // 对于iOS 11+，您可以将textContentType设置为用户名或密码，以启用设备钥匙串的登录详细信息自动填充。
+    // enum('none', 'URL', 'addressCity', 'addressCityAndState', 'addressState', 'countryName', 'creditCardNumber', 'emailAddress', 'familyName', 'fullStreetAddress', 'givenName', 'jobTitle', 'location', 'middleName', 'name', 'namePrefix', 'nameSuffix', 'nickname', 'organizationName', 'postalCode', 'streetAddressLine1', 'streetAddressLine2', 'sublocality', 'telephoneNumber', 'username', 'password')
+            textContentType={"password"}
             />
 
             <TextInput
@@ -154,6 +166,10 @@ export default class TextInput3 extends Component<Props> {
 
     onKeyPress(event){
        console.log("onKeyPress:" + event.nativeEvent.key); 
+
+       const{textInput} = this;
+       console.log(textInput);
+
     }
 
 
@@ -192,7 +208,10 @@ const styles = StyleSheet.create({
         borderWidth:1,   //外边距的宽度
         borderColor:"#dddddd",  //外边距的颜色
         margin:10,
-        borderRadius:10,  //设置圆角的效果
+        // borderRadius:10,  //设置圆角的效果
+        borderLeftWidth:4,
+        borderTopRightRadius:20,
+
         shadowColor:'#0000ff',//设置一个阴影的颜色
         shadowOpacity: 0.5 ,//阴影的透明度  0~1
         shadowRadius:3 ,//阴影的扩散程度
