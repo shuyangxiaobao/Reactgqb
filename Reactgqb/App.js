@@ -50,6 +50,7 @@ import Demo34 from "./Common/34.View"
 import Demo35 from "./Common/35.VirtualizedList"
 import Demo36 from "./Common/36.WebView"
 import Demo37 from "./Common/37.ActionSheetIOS"
+import Demo38 from "./Common/38.Alert"
 
 
 // type
@@ -95,8 +96,8 @@ export default class App extends Component < Props > {
             // <Demo34/>
             // <Demo35/>
             // <Demo36/>
-            <Demo37/>
-            // <Demo38/>
+            // <Demo37/>
+            <Demo38/>
             // <Demo37/>
             // <Demo37/>
             // <Demo37/>
