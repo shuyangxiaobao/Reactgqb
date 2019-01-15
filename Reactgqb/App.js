@@ -51,8 +51,9 @@ import Demo35 from "./Common/35.VirtualizedList"
 import Demo36 from "./Common/36.WebView"
 import Demo37 from "./Common/37.ActionSheetIOS"
 import Demo38 from "./Common/38.Alert"
-
-
+import Demo39 from "./Common/39.AlertIOS"
+import Demo40 from "./Common/40.Animated"
+import Demo41 from "./Common/41.AppState"
 // type
 Props = {};
 export default class App extends Component < Props > {
@@ -97,10 +98,10 @@ export default class App extends Component < Props > {
             // <Demo35/>
             // <Demo36/>
             // <Demo37/>
-            <Demo38/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
+            // <Demo38/>
+            // <Demo39/>
+            <Demo40/>
+            <Demo41/>
             // <Demo37/>
             // <Demo37/>
             // <Demo37/>
@@ -128,3 +129,5 @@ export default class App extends Component < Props > {
 // npm install react-native-deprecated-custom-components --save
 
 // sudo npm install react-native-scrollable-tab-view --save    第三方tabbar
+
+//40.Animated 比较难，还有很未学习
