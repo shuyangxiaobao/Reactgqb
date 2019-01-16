@@ -54,6 +54,21 @@ import Demo38 from "./Common/38.Alert"
 import Demo39 from "./Common/39.AlertIOS"
 import Demo40 from "./Common/40.Animated"
 import Demo41 from "./Common/41.AppState"
+import Demo42 from "./Common/42.AsyncStorage"
+import Demo43 from "./Common/43.BackHandler"
+import Demo44 from "./Common/44.CameraRoll"
+// import Demo45 from "./Common"
+// import Demo46 from "./Common"
+// import Demo47 from "./Common"
+// import Demo48 from "./Common"
+// import Demo49 from "./Common"
+// import Demo50 from "./Common"
+
+
+
+
+
+
 // type
 Props = {};
 export default class App extends Component < Props > {
@@ -100,19 +115,19 @@ export default class App extends Component < Props > {
             // <Demo37/>
             // <Demo38/>
             // <Demo39/>
-            <Demo40/>
-            <Demo41/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
-            // <Demo37/>
+            // <Demo40/>
+            // <Demo41/>
+            // <Demo42/>
+            // <Demo43/>
+            <Demo44/>
+            // <Demo45/>
+            // <Demo46/>
+            // <Demo47/>
+            // <Demo48/>
+            // <Demo49/>
+            // <Demo50/>
+            // <Demo51/>
+            // <Demo52/>
 
 
 
@@ -129,5 +144,12 @@ export default class App extends Component < Props > {
 // npm install react-native-deprecated-custom-components --save
 
 // sudo npm install react-native-scrollable-tab-view --save    第三方tabbar
+
+// sudo npm install react-native-image-crop-picker --save   访问相册
+
+//  sudo npm install react-native-video --save   
+
+
+// react-native link
 
 //40.Animated 比较难，还有很未学习
