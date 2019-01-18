@@ -27,7 +27,10 @@ export default class Text1 extends Component<Props> {
                     加载项目中的图片
                 </Text>
                 <View style={styles.imagesStyle}>
-                    <Image source={require('./Source/img/icon3.png')} style={styles.imgeStyle}></Image>
+                    <Image 
+                    source={require('./Source/img/icon3.png')} 
+                    style={styles.imgeStyle}
+                    ></Image>
                     <Image source={require('./Source/img/icon7.png')}
                     style={styles.imgeStyle}></Image>
                 </View>
@@ -61,11 +64,22 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
     imgeStyle:{
-        width:80,
-        height:80,
+        width:100,
+        height:100,
         //      resizeMode:'cover',
-        resizeMode:'stretch',
+        resizeMode:'contain', //'cover', 'contain', 'stretch', 'repeat', 'center'
         margin:50,
+        borderWidth:5,  // 边框宽度
+        borderColor:"red",  //边框颜色
+        borderTopRightRadius:10,
+        borderRadius:40,  //边框圆角
+        backgroundColor:"blue",   //背景色
+        borderTopRightRadius:5, 
+        backfaceVisibility:"visible",
+        // tintColor:"yellow", //为所有非透明的像素指定一个颜色。
+        opacity:0.5,  //透明度
+        overflow:"scroll",
+
     },
     imagesStyle:{
         flexDirection:"row",

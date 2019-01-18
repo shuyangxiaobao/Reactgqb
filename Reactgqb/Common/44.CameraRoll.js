@@ -44,8 +44,7 @@ export default class CameraRollTest extends Component<Props> {
         <View style={styles.container}
         onStartShouldSetResponder={this._onStartShouldSetResponder}
         >
-<Text> {this.state.path}</Text>
-
+            <Text> {this.state.path}</Text>
         </View>
     );
     }
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         flexDirection:"column",
     },
-    imgeStyle:{
+    imageStyle:{
         width:80,
         height:80,
         //      resizeMode:'cover',

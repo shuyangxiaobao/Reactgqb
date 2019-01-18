@@ -14,7 +14,7 @@ import {Platform,
     AlertIOS,
 } from 'react-native';
 import Text1 from "./Common/1.Text1"
-import Image2 from "./Common/2.Image2"
+import Demo2 from "./Common/2.Image2"
 import Demo3 from "./Common/3.TextInput3"
 import TouchableOpacity4 from "./Common/4.TouchableOpacity4"
 import LifeCycle5 from "./Common/5.LifeCycle5"
@@ -57,12 +57,30 @@ import Demo41 from "./Common/41.AppState"
 import Demo42 from "./Common/42.AsyncStorage"
 import Demo43 from "./Common/43.BackHandler"
 import Demo44 from "./Common/44.CameraRoll"
-// import Demo45 from "./Common"
-// import Demo46 from "./Common"
-// import Demo47 from "./Common"
-// import Demo48 from "./Common"
-// import Demo49 from "./Common"
-// import Demo50 from "./Common"
+import Demo45 from "./Common/45.Clipboard"
+import Demo46 from "./Common/46.Dimensions"
+import Demo47 from "./Common/47.Geolocation"
+import Demo48 from "./Common/48.ImagePickerIOS"
+import Demo49 from "./Common/49.ImageStore"
+import Demo50 from "./Common/50.InteractionManager"
+import Demo51 from "./Common/51.Keyboard"
+import Demo52 from "./Common/52.LayoutAnimation"
+import Demo53 from "./Common/53.Linking"
+import Demo54 from "./Common/54.NetInfo"
+import Demo55 from "./Common/55.PanResponder"
+import Demo56 from "./Common/56.PixelRatio"
+import Demo57 from "./Common/57.PushNotificationIOS"
+import Demo58 from "./Common/58.Settings"
+import Demo59 from "./Common/59.阴影样式属性"
+import Demo60 from "./Common/60.Share"
+import Demo61 from "./Common/61.Vibration(震动)"
+// import Demo62 from "./Common"
+// import Demo63 from "./Common"
+// import Demo64 from "./Common"
+// import Demo65 from "./Common"
+// import Demo66 from "./Common"
+// import Demo67 from "./Common"
+// import Demo68 from "./Common"
 
 
 
@@ -80,8 +98,11 @@ export default class App extends Component < Props > {
             // <TouchableOpacity4/>
             // <LifeCycle5/>
             // <ScrollView6/>
-
+            // <Demo2/>
             // <Demo3/>
+            // <Demo4/> 
+            // <Demo5/> 
+            // <Demo6/>
             // <Demo7/>
             // <Demo8/>
             // <Demo9/>
@@ -119,7 +140,7 @@ export default class App extends Component < Props > {
             // <Demo41/>
             // <Demo42/>
             // <Demo43/>
-            <Demo44/>
+            // <Demo44/>
             // <Demo45/>
             // <Demo46/>
             // <Demo47/>
@@ -128,6 +149,19 @@ export default class App extends Component < Props > {
             // <Demo50/>
             // <Demo51/>
             // <Demo52/>
+            // <Demo53/>
+            // <Demo54/>
+            // <Demo55/>
+            // <Demo56/>
+            // <Demo57/>
+            // <Demo58/>
+            // <Demo59/>
+            // <Demo60/>
+            <Demo61/>
+            // <Demo62/>
+            // <Demo63/>
+            // <Demo64/>
+
 
 
 
