@@ -14,6 +14,7 @@ import {
     TouchableOpacity,
     AlertIOS,
     NativeAppEventEmitter,
+    Button,
 } from 'react-native';
 
 var {requireNativeComponent } = require('react-native');
@@ -29,7 +30,7 @@ import {NativeModules} from 'react-native';
 var manager = NativeModules.ViewOne;
 
 // RN 调用原生
-manager.changeTitle('我来了!!!');
+// manager.changeTitle('我来了!!!');
 // manager.ocmethod("1234");
 
 // 原生调用RN
@@ -40,13 +41,27 @@ NativeAppEventEmitter.addListener('RNnotfication',(userInfo)=>{
 export default class IOSView extends Component {
     render() {
         return (
-            // <TouchableOpacity>
-                <GQBView
-                style={{flex:1}}
+                // <GQBView
+                // style={{flex:1}}
+                // />
+                <View style={styles.container}>
+                <Button
+                onPress={()=>this.buttonClick()}
+                title={"跳转到原生页面33"}
+                color="#841584"
+                accessibilityLabel="Learn more about this purple button"
                 />
-            // </TouchableOpacity>
+            </View>
            
         );
+    }
+
+
+    buttonClick(){
+        // alert("000");
+    console.log(manager);
+       manager.changeTitle('我来了!!!');
+
     }
 
 

@@ -18,7 +18,7 @@ GLBatch blackBatch;
 GLShaderManager	shaderManager;
 
 
-GLfloat blockSize = 0.2f;
+GLfloat blockSize = 0.1f;
 GLfloat vVerts[] = { -blockSize, -blockSize, 0.0f,
     blockSize, -blockSize, 0.0f,
     blockSize,  blockSize, 0.0f,
@@ -28,6 +28,7 @@ GLfloat vVerts[] = { -blockSize, -blockSize, 0.0f,
 void SetupRC()
 {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f );
+//    初始化着色器
     shaderManager.InitializeStockShaders();
 
     //绘制1个移动矩形

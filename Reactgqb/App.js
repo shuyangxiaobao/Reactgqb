@@ -74,7 +74,7 @@ import Demo58 from "./Common/58.Settings"
 import Demo59 from "./Common/59.阴影样式属性"
 import Demo60 from "./Common/60.Share"
 import Demo61 from "./Common/61.Vibration(震动)"
-// import Demo62 from "./Common"
+import Demo62 from "./Common/62.rnJumpToIOS"
 // import Demo63 from "./Common"
 // import Demo64 from "./Common"
 // import Demo65 from "./Common"
@@ -112,7 +112,7 @@ export default class App extends Component < Props > {
             // <Demo13/>
             // <Demo14/>
             // <Demo15/>
-            // <Demo16/>
+            <Demo16/>
             // <Demo17/>
             // <Demo18/>
             // <Demo19/>
@@ -157,7 +157,7 @@ export default class App extends Component < Props > {
             // <Demo58/>
             // <Demo59/>
             // <Demo60/>
-            <Demo61/>
+            // <Demo61/>
             // <Demo62/>
             // <Demo63/>
             // <Demo64/>

@@ -40,7 +40,9 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		90083C6D21F06891005D1655 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90083C4A21F06856005D1655 /* libRCTCameraRoll.a */; };
 		906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BB65E21DCB2AE0041388B /* ViewOne.m */; };
-		906BB66221DCB4680041388B /* HKViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BB66021DCB4680041388B /* HKViewOne.m */; };
+		90DF6F5421F96BEC002AB3A1 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF6F5221F96BEC002AB3A1 /* TestController.m */; };
+		90DF6F5521F96BEC002AB3A1 /* TestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DF6F5321F96BEC002AB3A1 /* TestController.xib */; };
+		90DF6F5821F99058002AB3A1 /* HKViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF6F5621F99058002AB3A1 /* HKViewOne.m */; };
 		90E7FC8721EF401500A24691 /* QBImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E7FC8821EF401500A24691 /* QBImagePicker.framework */; };
 		90E7FC8A21EF431000A24691 /* RSKImageCropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E7FC8921EF431000A24691 /* RSKImageCropper.framework */; };
 		90E7FC8B21EF431000A24691 /* RSKImageCropper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90E7FC8921EF431000A24691 /* RSKImageCropper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -409,8 +411,11 @@
 		90083C4121F06856005D1655 /* RCTPhotoLibraryImageLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTPhotoLibraryImageLoader.m; sourceTree = "<group>"; };
 		906BB65D21DCB2AE0041388B /* ViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewOne.h; path = Reactgqb/ViewOne.h; sourceTree = "<group>"; };
 		906BB65E21DCB2AE0041388B /* ViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewOne.m; path = Reactgqb/ViewOne.m; sourceTree = "<group>"; };
-		906BB66021DCB4680041388B /* HKViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKViewOne.m; path = Reactgqb/HKViewOne.m; sourceTree = "<group>"; };
-		906BB66121DCB4680041388B /* HKViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKViewOne.h; path = Reactgqb/HKViewOne.h; sourceTree = "<group>"; };
+		90DF6F5121F96BEC002AB3A1 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
+		90DF6F5221F96BEC002AB3A1 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
+		90DF6F5321F96BEC002AB3A1 /* TestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestController.xib; sourceTree = "<group>"; };
+		90DF6F5621F99058002AB3A1 /* HKViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKViewOne.m; path = Reactgqb/HKViewOne.m; sourceTree = "<group>"; };
+		90DF6F5721F99058002AB3A1 /* HKViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKViewOne.h; path = Reactgqb/HKViewOne.h; sourceTree = "<group>"; };
 		90E7FC8821EF401500A24691 /* QBImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QBImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7FC8921EF431000A24691 /* RSKImageCropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RSKImageCropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A647EB378BA747E293E4AE64 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
@@ -561,8 +566,8 @@
 		13B07FAE1A68108700A75B9A /* Reactgqb */ = {
 			isa = PBXGroup;
 			children = (
-				906BB66121DCB4680041388B /* HKViewOne.h */,
-				906BB66021DCB4680041388B /* HKViewOne.m */,
+				90DF6F5721F99058002AB3A1 /* HKViewOne.h */,
+				90DF6F5621F99058002AB3A1 /* HKViewOne.m */,
 				906BB65D21DCB2AE0041388B /* ViewOne.h */,
 				906BB65E21DCB2AE0041388B /* ViewOne.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -572,6 +577,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				90DF6F5121F96BEC002AB3A1 /* TestController.h */,
+				90DF6F5221F96BEC002AB3A1 /* TestController.m */,
+				90DF6F5321F96BEC002AB3A1 /* TestController.xib */,
 			);
 			name = Reactgqb;
 			sourceTree = "<group>";
@@ -1235,6 +1243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DF6F5521F96BEC002AB3A1 /* TestController.xib in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -1301,9 +1310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DF6F5821F99058002AB3A1 /* HKViewOne.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				90DF6F5421F96BEC002AB3A1 /* TestController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				906BB66221DCB4680041388B /* HKViewOne.m in Sources */,
 				906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

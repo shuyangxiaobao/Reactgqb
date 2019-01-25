@@ -37,6 +37,8 @@
 GLShaderManager		shaderManager;
 GLMatrixStack		modelViewMatrix;
 GLMatrixStack		projectionMatrix;
+
+//GLFrame叫参考帧
 GLFrame				cameraFrame;
 GLFrame             objectFrame;
 //投影矩阵
@@ -88,7 +90,7 @@ void SetupRC()
       参数2：顶点数
       参数3：纹理坐标（可选）
      
-     //负责顶点坐标
+     //复制顶点坐标
      void GLBatch::CopyVertexData3f(GLFloat *vNorms);
      
      //结束，表示已经完成数据复制工作

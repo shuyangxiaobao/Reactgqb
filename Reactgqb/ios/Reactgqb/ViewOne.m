@@ -7,6 +7,8 @@
 //
 
 #import "ViewOne.h"
+#import "TestController.h"
+#import "AppDelegate.h"
 @interface ViewOne ()<RCTBridgeModule>
 /** title */
 @property(copy,nonatomic)NSString * title;
@@ -19,7 +21,14 @@ RCT_EXPORT_MODULE()
 
 // RN调用原生
 RCT_EXPORT_METHOD(changeTitle:(NSString *)title){
-  self.title = title;
+  dispatch_async(dispatch_get_main_queue(), ^{
+        self.title = title;
+      TestController *one = [[TestController alloc]init];
+    
+      AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+      [app.nav pushViewController:one animated:YES];    
+  });
 }
 // RN调用原生
 RCT_EXPORT_METHOD(ocmethod:(NSString *)title){

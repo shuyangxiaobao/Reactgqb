@@ -53,9 +53,13 @@ export default class Text1 extends Component<Props> {
 
     _vibrate = ()=>{
         // Vibration.vibrate();
-        this.timer = setInterval(()=>{
-            Vibration.vibrate();
-        },1)
+        // this.timer = setInterval(()=>{
+        //     Vibration.vibrate();
+        // },1)
+
+        this.timer = setTimeout(() => {
+            Vibration.vibrate(); 
+        }, 1);
     }
 
     _cancel = ()=>{

@@ -7,7 +7,8 @@
 //
 
 #import "HKViewOne.h"
-
+#import "TestController.h"
+#import "AppDelegate.h"
 @interface HKViewOne ()<RCTBridgeModule>
 /** title */
 @property(copy,nonatomic)NSString * title;
@@ -19,7 +20,22 @@
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(changeTitle:(NSString *)title){
-    self.title = title;
+//    self.title = title;
+//  TestController *one = [[TestController alloc]init];
+//
+//  AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//
+//  [app.nav pushViewController:one animated:YES];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    //    self.title = title;
+    //  TestController *one = [[TestController alloc]init];
+    //
+    //  AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //
+    //  [app.nav pushViewController:one animated:YES];
+    [self btnClick];
+
+  });
 }
 
 //返回你想要显示的那个View

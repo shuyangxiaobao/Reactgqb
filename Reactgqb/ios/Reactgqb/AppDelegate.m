@@ -21,7 +21,7 @@
     jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   #endif
   
-  jsCodeLocation = [NSURL URLWithString:@"http://10.31.10.49:8081/index.bundle?platform=ios&dev=true"];
+  jsCodeLocation = [NSURL URLWithString:@"http://10.31.22.8:8081/index.bundle?platform=ios&dev=true"];
 
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -33,8 +33,19 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
+  
+//  self.window.rootViewController = rootViewController;
+//  [self.window makeKeyAndVisible];
+  
+  
+  // 初始化Nav
+  _nav = [[UINavigationController alloc]initWithRootViewController:rootViewController];
+  _nav.navigationBarHidden = YES;
+  self.window.rootViewController = _nav;
   [self.window makeKeyAndVisible];
+  
+
+  
   return YES;
 }
 
