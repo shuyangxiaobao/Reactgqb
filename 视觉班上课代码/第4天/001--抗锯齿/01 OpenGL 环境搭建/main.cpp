@@ -26,6 +26,8 @@ GLBatch moonBatch;
 #define SCREEN_Y        600
 
 
+//点 线 开启混合  多边形开启多重采样
+
 // 选择菜单
 void ProcessMenu(int value)
 {
@@ -33,14 +35,19 @@ void ProcessMenu(int value)
     {
         case 1:
             //打开抗锯齿，并给出关于尽可能进行最佳的处理提示
-//            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//            glEnable(GL_BLEND);
-//            glEnable(GL_POINT_SMOOTH);
-//            glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
-//            glEnable(GL_LINE_SMOOTH);
-//            glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-//            glEnable(GL_POLYGON_SMOOTH);
-//            glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+//            开启组合函数 计算混合颜色因子
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//             开启混合
+            glEnable(GL_BLEND);
+//            对点进行抗锯齿
+            glEnable(GL_POINT_SMOOTH);
+            glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
+//            对线进行抗锯齿
+            glEnable(GL_LINE_SMOOTH);
+            glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+//            对多边形进行抗锯齿
+            glEnable(GL_POLYGON_SMOOTH);
+            glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
             break;
             
         case 2:
@@ -74,7 +81,7 @@ void RenderScene(void)
     shaderManager.UseStockShader(GLT_SHADER_FLAT, viewFrustum.GetProjectionMatrix(), vWhite);
     
     //关闭多重采样
-    glDisable(GLUT_MULTISAMPLE);
+     glDisable(GLUT_MULTISAMPLE);
     //设置混合因子
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     //开始混合
@@ -93,7 +100,7 @@ void RenderScene(void)
     mediumStarBatch.Draw();
     
     //绘制大星星
-    glPointSize(8.0f);
+    glPointSize(20.0f);
     largeStarBatch.Draw();
     
     // 绘制遥远的地平线
@@ -105,7 +112,7 @@ void RenderScene(void)
     glDisable(GL_LINE_SMOOTH);
     glDisable(GL_BLEND);
     
-    //针对多边形开始多重采样
+    //针对多边形开启多重采样
     glEnable(GLUT_MULTISAMPLE);
     
     //绘制月亮
@@ -128,6 +135,7 @@ void SetupRC()
     shaderManager.InitializeStockShaders();
     
     // 小星星
+//    创建小星星的三角形批次类
     smallStarBatch.Begin(GL_POINTS, SMALL_STARS);
     for(i = 0; i < SMALL_STARS; i++)
     {

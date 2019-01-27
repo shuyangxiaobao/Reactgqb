@@ -18,9 +18,9 @@ GLFrame             viewFrame;
 //使用GLFrustum类来设置透视投影
 GLFrustum           viewFrustum;
 GLTriangleBatch     torusBatch;
-GLMatrixStack       modelViewMatix;
-GLMatrixStack       projectionMatrix;
-GLGeometryTransform transformPipeline;
+GLMatrixStack       modelViewMatix;  //模型视图矩阵
+GLMatrixStack       projectionMatrix; //投影矩阵
+GLGeometryTransform transformPipeline;  //几何变换
 GLShaderManager     shaderManager;
 
 //标记：背面剔除、深度测试
@@ -41,9 +41,9 @@ void ProcessMenu(int value)
             break;
             
         case 3:
+//            设置多边形的模式
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
             break;
-            
         case 4:
             
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -93,10 +93,10 @@ void RenderScene(void)
     //参数1：平面着色器
     //参数2：模型视图投影矩阵
     //参数3：颜色
-//    shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vRed);
+    shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vRed);
     
     //使用默认光源着色器
-    //通过光源、阴影效果跟提现立体效果
+    //通过光源、阴影效果跟体现立体效果
     //参数1：GLT_SHADER_DEFAULT_LIGHT 默认光源着色器
     //参数2：模型视图矩阵
     //参数3：投影矩阵
@@ -109,7 +109,7 @@ void RenderScene(void)
     //出栈
     modelViewMatix.PopMatrix();
     
-    
+//    交换两个缓冲区指针。
     glutSwapBuffers();
 }
 
@@ -134,9 +134,7 @@ void SetupRC()
     //参数4、5：主半径和从半径的细分单元数量
    
     gltMakeTorus(torusBatch, 1.0f, 0.3f, 52, 26);
-    
-    
-    
+
     //点的大小
     glPointSize(4.0f);
 }
@@ -158,6 +156,7 @@ void SpecialKeys(int key, int x, int y)
         viewFrame.RotateWorld(m3dDegToRad(5.0), 0.0f, 1.0f, 0.0f);
     
     //重新刷新window
+//    当前窗口需要重新绘制
     glutPostRedisplay();
 }
 
@@ -175,9 +174,9 @@ void ChangeSize(int w, int h)
     // 设置透视模式，初始化其透视矩阵
     viewFrustum.SetPerspective(35.0f, float(w)/float(h), 1.0f, 100.0f);
     
-    //把透视矩阵加载到透视矩阵对阵中
+    //把透视矩阵加载到透视矩阵对阵中       由透视投影得到投影矩阵
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    // 初始化渲染管线
+    // 初始化渲染管线。 设置变换管线以使用两个矩阵堆栈
     transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
 }
 

@@ -81,22 +81,23 @@ void RenderScene(void)
     GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
     
     M3DMatrix44f mFinalTransform, mTranslationMatrix, mRotationMatrix;
-    
+
     //平移 xPos,yPos
     m3dTranslationMatrix44(mTranslationMatrix, xPos, yPos, 0.0f);
-    
+
     // 每次重绘时，旋转5度
     static float yRot = 0.0f;
-    yRot += 5.0f;
     m3dRotationMatrix44(mRotationMatrix, m3dDegToRad(yRot), 0.0f, 0.0f, 1.0f);
-    
+    yRot += 5.0f;
+
+
     //将旋转和移动的结果合并到mFinalTransform 中
     m3dMatrixMultiply44(mFinalTransform, mTranslationMatrix, mRotationMatrix);
-    
+
     //将矩阵结果提交到固定着色器（平面着色器）中。
     shaderManager.UseStockShader(GLT_SHADER_FLAT, mFinalTransform, vRed);
     squareBatch.Draw();
-    
+
     // 执行缓冲区交换
     glutSwapBuffers();
 }
