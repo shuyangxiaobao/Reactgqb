@@ -14,7 +14,7 @@
 #include <GL/glut.h>
 #endif
 
-
+//GLFrame叫参考帧
 GLFrame             viewFrame;
 GLFrustum           viewFrustum;
 GLBatch             tubeBatch;
@@ -75,12 +75,15 @@ void SetupRC()
     glClearColor(0.0f, 0.0f, 0.75f, 1.0f );
     
     //    glEnable(GL_CULL_FACE);
+    
     glEnable(GL_DEPTH_TEST);
     
     //初始化着色器管理器
     shaderManager.InitializeStockShaders();
     
-    
+//    参数1：表示使用的图元
+//    参数2：顶点数
+//    参数3：纹理坐标（可选）
     tubeBatch.Begin(GL_QUADS, 200);
     
     float fZ = 100.0f;
@@ -219,7 +222,6 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(-1.0f, 0.0f, 0.0f);
     tubeBatch.Vertex3f(-50.0f, -50.0f, fZ);
-    
 
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
@@ -365,53 +367,49 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-50.0f, 50.0f, bZ);
     
-
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
-    
     tubeBatch.Vertex3f(50.0f,-50.0f,bZ);
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
-    
     tubeBatch.Vertex3f(35.0f, -50.0f, bZ);
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
-    
     tubeBatch.Vertex3f(35.0f, 50.0f, bZ);
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
-    
     tubeBatch.Vertex3f(50.0f, 50.0f, bZ);
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, 50.0f, bZ);
+    
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, 35.0f, bZ);
+    
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f, 35.0f, bZ);
-    
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f, 50.0f, bZ);
     
-
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, -35.0f,bZ);
+    
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, -50.0f, bZ);
+    
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f, -50.0f, bZ);
-    
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
@@ -494,7 +492,6 @@ void SpecialKeys(int key, int x, int y)
     
     if(key == GLUT_KEY_RIGHT)
         viewFrame.RotateWorld(m3dDegToRad(5.0), 0.0f, 1.0f, 0.0f);
-    
     //刷新窗口
     glutPostRedisplay();
 }
@@ -520,7 +517,6 @@ void ChangeSize(int w, int h)
     //1.获取投影矩阵 viewFrustum.GetProjectionMatrix()
     //2.将投影矩阵加载到projectionMatrix中
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    
     //设置变换管线以使用两个矩阵堆栈
     transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
 }
@@ -531,22 +527,25 @@ int main(int argc, char* argv[])
     gltSetWorkingDirectory(argv[0]);
     
     glutInit(&argc, argv);
+    //申请一个双缓存区、颜色缓存区、深度缓存区、模板缓存区
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
     glutInitWindowSize(800, 600);
     glutCreateWindow("Orthographic Projection Example");
+    //注册回调函数（改变尺寸）
     glutReshapeFunc(ChangeSize);
+    //特殊键位函数（上下左右）
     glutSpecialFunc(SpecialKeys);
+     //显示函数
     glutDisplayFunc(RenderScene);
     
-    
+    //判断一下是否能初始化glew库，确保项目能正常使用OpenGL 框架
     GLenum err = glewInit();
     if (GLEW_OK != err) {
         fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(err));
         return 1;
     }
-    
     SetupRC();
-    
     glutMainLoop();
     return 0;
+  
 }

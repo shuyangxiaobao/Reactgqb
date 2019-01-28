@@ -57,19 +57,18 @@ void SetupRC()
 {
    
     glClearColor(0.0f, 0.0f, 0.75f, 1.0f );
-
-
+    
+   
     glEnable(GL_DEPTH_TEST);
-
+    
     shaderManager.InitializeStockShaders();
     viewFrame.MoveForward(450.0f);
-
-
+    
+    
     tubeBatch.Begin(GL_QUADS, 200);
-
+    
     float fZ = 100.0f;
     float bZ = -100.0f;
-
     
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
@@ -515,7 +514,7 @@ void ChangeSize(int w, int h)
     glViewport(0, 0, w, h);
     
     //设置正投影矩阵
-//    viewFrustum.SetOrthographic(-130.0f, 130.0f, -130.0f, 130.0f, -130.0f, 130.0f);
+    //viewFrustum.SetOrthographic(-130.0f, 130.0f, -130.0f, 130.0f, -130.0f, 130.0f);
     
     viewFrustum.SetPerspective(35.0f, float(w)/float(h), 1.0f, 1000.0f);
     
@@ -524,11 +523,10 @@ void ChangeSize(int w, int h)
 }
 
 
-
 int main(int argc, char* argv[])
 {
     gltSetWorkingDirectory(argv[0]);
-
+    
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
     glutInitWindowSize(800, 600);
@@ -536,15 +534,16 @@ int main(int argc, char* argv[])
     glutReshapeFunc(ChangeSize);
     glutSpecialFunc(SpecialKeys);
     glutDisplayFunc(RenderScene);
-
-
+    
+    
     GLenum err = glewInit();
     if (GLEW_OK != err) {
         fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(err));
         return 1;
     }
+    
     SetupRC();
+    
     glutMainLoop();
     return 0;
 }
-

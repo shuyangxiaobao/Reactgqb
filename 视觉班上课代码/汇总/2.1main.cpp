@@ -73,16 +73,14 @@ void SetupRC()
 {
     // 灰色的背景
     glClearColor(0.7f, 0.7f, 0.7f, 1.0f );
-//    初始化着色器管理器
+    
     shaderManager.InitializeStockShaders();
     
-//    开启深度测试
     glEnable(GL_DEPTH_TEST);
     
     //设置变换管线以使用两个矩阵堆栈
     transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
     
-    //将相机向后移动20个单元：肉眼到物体之间的距离
     cameraFrame.MoveForward(-20.0f);
     
     /*
