@@ -26,7 +26,7 @@ GLBatch             leftWallBatch;//左墙面
 GLBatch             rightWallBatch;//右墙面
 
 //深度初始值，-65。
-GLfloat             viewZ = -120.0f;
+GLfloat             viewZ = -80.0f;
 
 // 纹理标识符号
 #define TEXTURE_BRICK   0 //墙面
@@ -131,7 +131,6 @@ void SetupRC()
      参数2：纹理对象标识数组
      */
     glGenTextures(TEXTURE_COUNT, textures);
-    
     
     for(iLoop = 0; iLoop < TEXTURE_COUNT; iLoop++)
     {
@@ -264,7 +263,7 @@ void SetupRC()
         rightWallBatch.MultiTexCoord2f(0, 1.0f, 0.0f);
         rightWallBatch.Vertex3f(10.0f, -10.0f, z - 10.0f);
         
-        rightWallBatch.MultiTexCoord2f(0, 1.0f, 1.0f);
+        rightWallBatch.MultiTexCoord2f(0, 1.0f, 1.0f);\
         rightWallBatch.Vertex3f(10.0f, 10.0f, z - 10.0f);
     }
     rightWallBatch.End();
@@ -283,7 +282,7 @@ void ShutdownRC(void)
 void SpecialKeys(int key, int x, int y)
 {
     if(key == GLUT_KEY_UP)
-        //移动的是深度值，Z
+        //移动的是深度值，ZxxszaQAzsxdcfgvhbnjmkAS最低消费成功 v 回家看了；‘
         viewZ += 0.5f;
     
     if(key == GLUT_KEY_DOWN)
