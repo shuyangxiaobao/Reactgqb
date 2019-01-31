@@ -31,11 +31,31 @@
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="1uP-cV-aFC"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是iOS原生页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRr-2s-sky">
+                    <rect key="frame" x="122" y="84" width="131" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-qp-oX0">
+                    <rect key="frame" x="129.5" y="533" width="116" height="34"/>
+                    <color key="backgroundColor" red="0.4823529412" green="0.31372549020000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="跳转到RN模块">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToRN:" destination="-1" eventType="touchUpInside" id="CG7-M7-LaZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="0Ux-qp-oX0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EDm-P9-ULF"/>
                 <constraint firstItem="QoU-Xm-kHt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fx1-H0-fSV"/>
                 <constraint firstItem="QoU-Xm-kHt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pho-Qy-XGh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="0Ux-qp-oX0" secondAttribute="bottom" constant="100" id="Vhk-jk-fZM"/>
+                <constraint firstItem="jRr-2s-sky" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YiY-8C-0Xo"/>
+                <constraint firstItem="jRr-2s-sky" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="64" id="xs1-B3-xZV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>

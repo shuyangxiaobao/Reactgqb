@@ -60,7 +60,14 @@ export default class IOSView extends Component {
     buttonClick(){
         // alert("000");
     console.log(manager);
-       manager.changeTitle('我来了!!!');
+    //    manager.changeTitle('我来了!!!');
+
+       manager.jumpToIOSVC((a1,a2)=>{
+            // alert(info);
+            console.log(a1);
+            console.log(a2);
+
+       })
 
     }
 

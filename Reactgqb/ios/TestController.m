@@ -27,6 +27,12 @@
   [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+- (IBAction)jumpToRN:(UIButton *)sender {
+  
+  NSLog(@"跳转到RN模块");
+}
+
 /*
 #pragma mark - Navigation
 

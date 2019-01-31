@@ -40,6 +40,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		90083C6D21F06891005D1655 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90083C4A21F06856005D1655 /* libRCTCameraRoll.a */; };
 		906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 906BB65E21DCB2AE0041388B /* ViewOne.m */; };
+		90ADF26422008ACC0098F78E /* KYEFuncTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ADF26322008ACC0098F78E /* KYEFuncTools.m */; };
 		90DF6F5421F96BEC002AB3A1 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF6F5221F96BEC002AB3A1 /* TestController.m */; };
 		90DF6F5521F96BEC002AB3A1 /* TestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DF6F5321F96BEC002AB3A1 /* TestController.xib */; };
 		90DF6F5821F99058002AB3A1 /* HKViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF6F5621F99058002AB3A1 /* HKViewOne.m */; };
@@ -411,6 +412,8 @@
 		90083C4121F06856005D1655 /* RCTPhotoLibraryImageLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTPhotoLibraryImageLoader.m; sourceTree = "<group>"; };
 		906BB65D21DCB2AE0041388B /* ViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewOne.h; path = Reactgqb/ViewOne.h; sourceTree = "<group>"; };
 		906BB65E21DCB2AE0041388B /* ViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewOne.m; path = Reactgqb/ViewOne.m; sourceTree = "<group>"; };
+		90ADF26222008ACC0098F78E /* KYEFuncTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYEFuncTools.h; sourceTree = "<group>"; };
+		90ADF26322008ACC0098F78E /* KYEFuncTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYEFuncTools.m; sourceTree = "<group>"; };
 		90DF6F5121F96BEC002AB3A1 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		90DF6F5221F96BEC002AB3A1 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		90DF6F5321F96BEC002AB3A1 /* TestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestController.xib; sourceTree = "<group>"; };
@@ -566,6 +569,7 @@
 		13B07FAE1A68108700A75B9A /* Reactgqb */ = {
 			isa = PBXGroup;
 			children = (
+				90ADF23822008AB60098F78E /* Tool */,
 				90DF6F5721F99058002AB3A1 /* HKViewOne.h */,
 				90DF6F5621F99058002AB3A1 /* HKViewOne.m */,
 				906BB65D21DCB2AE0041388B /* ViewOne.h */,
@@ -717,6 +721,15 @@
 				90083C4A21F06856005D1655 /* libRCTCameraRoll.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		90ADF23822008AB60098F78E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				90ADF26222008ACC0098F78E /* KYEFuncTools.h */,
+				90ADF26322008ACC0098F78E /* KYEFuncTools.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		90E7FC5221EF3EE900A24691 /* Recovered References */ = {
@@ -1313,6 +1326,7 @@
 				90DF6F5821F99058002AB3A1 /* HKViewOne.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				90DF6F5421F96BEC002AB3A1 /* TestController.m in Sources */,
+				90ADF26422008ACC0098F78E /* KYEFuncTools.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				906BB65F21DCB2AE0041388B /* ViewOne.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90ADF26622017FF40098F78E /* main2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90ADF26522017FF40098F78E /* main2.cpp */; };
 		D6BCA4151F2E36AD00B91743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BCA4141F2E36AD00B91743 /* Assets.xcassets */; };
 		D6BCA4181F2E36AD00B91743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BCA4161F2E36AD00B91743 /* Main.storyboard */; };
 		D6BCA4211F2E36B900B91743 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BCA4201F2E36B900B91743 /* OpenGL.framework */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90ADF26522017FF40098F78E /* main2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main2.cpp; sourceTree = "<group>"; };
 		D6BCA4081F2E36AD00B91743 /* 01OpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01OpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCA4141F2E36AD00B91743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BCA4171F2E36AD00B91743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				D6BCA4191F2E36AD00B91743 /* Info.plist */,
 				D6BCA40E1F2E36AD00B91743 /* Supporting Files */,
 				D6BCA4261F2E375100B91743 /* main.cpp */,
+				90ADF26522017FF40098F78E /* main2.cpp */,
 			);
 			path = 01OpenGL;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BCA4271F2E375100B91743 /* main.cpp in Sources */,
+				90ADF26622017FF40098F78E /* main2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +362,7 @@
 				D6BCA41E1F2E36AD00B91743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

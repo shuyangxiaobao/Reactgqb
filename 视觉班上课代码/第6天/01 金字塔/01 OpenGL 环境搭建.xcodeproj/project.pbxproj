@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90BA319B21FEFB0900A33C35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90BA319A21FEFB0900A33C35 /* main.cpp */; };
+		90BA319B21FEFB0900A33C35 /* main2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90BA319A21FEFB0900A33C35 /* main2.cpp */; };
 		D65991271FBDD53B007468B6 /* brick.tga in Resources */ = {isa = PBXBuildFile; fileRef = D65991241FBDD53B007468B6 /* brick.tga */; };
 		D65991281FBDD53B007468B6 /* ceiling.tga in Resources */ = {isa = PBXBuildFile; fileRef = D65991251FBDD53B007468B6 /* ceiling.tga */; };
 		D65991291FBDD53B007468B6 /* floor.tga in Resources */ = {isa = PBXBuildFile; fileRef = D65991261FBDD53B007468B6 /* floor.tga */; };
@@ -19,7 +19,7 @@
 		D6CFA6691F546B8A00FD9232 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CFA6681F546B8A00FD9232 /* GLUT.framework */; };
 		D6CFA66B1F546B9100FD9232 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CFA66A1F546B9100FD9232 /* OpenGL.framework */; };
 		D6CFA67D1F546BF800FD9232 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CFA67C1F546BF800FD9232 /* libGLTools.a */; };
-		D6CFA67F1F546CE100FD9232 /* main1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA67E1F546CE100FD9232 /* main1.cpp */; };
+		D6CFA67F1F546CE100FD9232 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA67E1F546CE100FD9232 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		90BA319A21FEFB0900A33C35 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		90BA319A21FEFB0900A33C35 /* main2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main2.cpp; sourceTree = "<group>"; };
 		D65991241FBDD53B007468B6 /* brick.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = brick.tga; sourceTree = "<group>"; };
 		D65991251FBDD53B007468B6 /* ceiling.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = ceiling.tga; sourceTree = "<group>"; };
 		D65991261FBDD53B007468B6 /* floor.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = floor.tga; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		D6CFA67A1F546BF800FD9232 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
 		D6CFA67B1F546BF800FD9232 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
 		D6CFA67C1F546BF800FD9232 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = "01 OpenGL 环境搭建/libGLTools.a"; sourceTree = "<group>"; };
-		D6CFA67E1F546CE100FD9232 /* main1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main1.cpp; sourceTree = "<group>"; };
+		D6CFA67E1F546CE100FD9232 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 				D6CFA6401F546B5D00FD9232 /* Assets.xcassets */,
 				D6CFA6421F546B5D00FD9232 /* Main.storyboard */,
 				D6CFA6451F546B5D00FD9232 /* Info.plist */,
-				D6CFA67E1F546CE100FD9232 /* main1.cpp */,
-				90BA319A21FEFB0900A33C35 /* main.cpp */,
+				D6CFA67E1F546CE100FD9232 /* main.cpp */,
+				90BA319A21FEFB0900A33C35 /* main2.cpp */,
 				D6CFA63A1F546B5D00FD9232 /* Supporting Files */,
 			);
 			path = "01 OpenGL 环境搭建";
@@ -342,8 +342,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6CFA67F1F546CE100FD9232 /* main1.cpp in Sources */,
-				90BA319B21FEFB0900A33C35 /* main.cpp in Sources */,
+				D6CFA67F1F546CE100FD9232 /* main.cpp in Sources */,
+				90BA319B21FEFB0900A33C35 /* main2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

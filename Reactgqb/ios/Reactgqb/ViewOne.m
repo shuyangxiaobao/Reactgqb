@@ -9,6 +9,8 @@
 #import "ViewOne.h"
 #import "TestController.h"
 #import "AppDelegate.h"
+#import "KYEFuncTools.h"
+
 @interface ViewOne ()<RCTBridgeModule>
 /** title */
 @property(copy,nonatomic)NSString * title;
@@ -30,6 +32,27 @@ RCT_EXPORT_METHOD(changeTitle:(NSString *)title){
       [app.nav pushViewController:one animated:YES];    
   });
 }
+
+
+
+RCT_EXPORT_METHOD(jumpToIOSVC:(RCTResponseSenderBlock)callback) {
+  dispatch_async(dispatch_get_main_queue(), ^{
+
+//    TestController *one = [[TestController alloc]init];
+//
+//    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//
+//    [app.nav pushViewController:one animated:YES];
+    
+    
+    TestController *one = [[TestController alloc]init];
+    [[KYEFuncTools presentingVC].navigationController pushViewController:one animated:YES];
+    
+  });
+  callback(@[@"asd",@"gh"]);
+}
+
+
 // RN调用原生
 RCT_EXPORT_METHOD(ocmethod:(NSString *)title){
   self.title = title;
