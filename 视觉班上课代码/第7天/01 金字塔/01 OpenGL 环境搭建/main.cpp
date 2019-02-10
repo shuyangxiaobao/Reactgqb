@@ -14,18 +14,17 @@
 #endif
 
 GLShaderManager		shaderManager;
-GLMatrixStack		modelViewMatrix;
-GLMatrixStack		projectionMatrix;
-GLFrame				cameraFrame;
-GLFrame             objectFrame;
-GLFrustum			viewFrustum;
-
-GLBatch             pyramidBatch;
+GLMatrixStack		modelViewMatrix;    //模型视图矩阵
+GLMatrixStack		projectionMatrix;   //投影矩阵
+GLFrame				cameraFrame;        //观察者位置
+GLFrame             objectFrame;        //世界坐标位置
+GLFrustum			viewFrustum;        //视景体，用来构造投影矩阵
+GLBatch             pyramidBatch;       //金字塔
 
 //纹理变量，一般使用无符号整型
 GLuint              textureID;
 
-GLGeometryTransform	transformPipeline;
+GLGeometryTransform	transformPipeline;          //几何图形变换管道
 M3DMatrix44f		shadowMatrix;
 
 //绘制金字塔
@@ -57,28 +56,28 @@ void MakePyramid(GLBatch& pyramidBatch)
     pyramidBatch.MultiTexCoord2f(0, 0.0f, 0.0f);
     //vBlackLeft点
     pyramidBatch.Vertex3f(-1.0f, -1.0f, -1.0f);
-   
-    
+
+
     pyramidBatch.Normal3f(0.0f, -1.0f, 0.0f);
     pyramidBatch.MultiTexCoord2f(0, 1.0f, 0.0f);
     //vBlackRight点
     pyramidBatch.Vertex3f(1.0f, -1.0f, -1.0f);
-    
+
     pyramidBatch.Normal3f(0.0f, -1.0f, 0.0f);
     pyramidBatch.MultiTexCoord2f(0, 1.0f, 1.0f);
     //vFrontRight点
     pyramidBatch.Vertex3f(1.0f, -1.0f, 1.0f);
-    
-    
+
+
     //三角形B
     pyramidBatch.Normal3f(0.0f, -1.0f, 0.0f);
     pyramidBatch.MultiTexCoord2f(0, 0.0f, 1.0f);
     pyramidBatch.Vertex3f(-1.0f, -1.0f, 1.0f);
-    
+
     pyramidBatch.Normal3f(0.0f, -1.0f, 0.0f);
     pyramidBatch.MultiTexCoord2f(0, 0.0f, 0.0f);
     pyramidBatch.Vertex3f(-1.0f, -1.0f, -1.0f);
-    
+
     pyramidBatch.Normal3f(0.0f, -1.0f, 0.0f);
     pyramidBatch.MultiTexCoord2f(0, 1.0f, 1.0f);
     pyramidBatch.Vertex3f(1.0f, -1.0f, 1.0f);
